@@ -1,22 +1,25 @@
-import { View, Text, Button } from 'react-native';
+// import { View, Text, Button } from 'react-native';
+import { View } from 'react-native';
 import React, { useState } from 'react';
-import First from "./src/First.jsx"
+import Jsx from './src/Jsx';
+// import First from "./src/First.jsx"
 
 const App = () => {
   const [name, setName] = useState('Debashish'); // Initial name is 'Piyush'
 
   const handlePress = () => {
-    setName((prevName) => (prevName === 'Debashish' ? 'Rajeeb' : 'Debashish'));
+    setName(prevName => (prevName === 'Debashish' ? 'Rajeeb' : 'Debashish'));
   };
 
   return (
-    <View style={{ flex: 1, backgroundColor: 'black', justifyContent: 'center', alignItems: 'center' }}>
-      <Text style={{ fontSize: 20, textAlign: 'center', marginBottom: 20, color: 'white' }}>{name}</Text>
+    <View>
+      {/* <Text style={{ fontSize: 20, textAlign: 'center', marginBottom: 20, color: 'white' }}>{name}</Text> */}
       {/* <FunctionBasedComponent /> */}
+      {/* <First />
       <First />
-      <First />
-      <First />
-      <Button title="Toggle Name" onPress={handlePress} />
+      <First /> */}
+      {/* <Button title="Toggle Name" onPress={handlePress} /> */}
+      <Jsx />   
     </View>
   );
 };
