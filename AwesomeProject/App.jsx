@@ -1,7 +1,8 @@
 // import { View, Text, Button } from 'react-native';
 import { View } from 'react-native';
 import React, { useState } from 'react';
-import Jsx from './src/Jsx';
+import OnPress from './src/OnPress';
+// import Jsx from './src/Jsx';
 // import First from "./src/First.jsx"
 
 const App = () => {
@@ -19,7 +20,8 @@ const App = () => {
       <First />
       <First /> */}
       {/* <Button title="Toggle Name" onPress={handlePress} /> */}
-      <Jsx />   
+      {/* <Jsx />    */}
+      <OnPress />
     </View>
   );
 };
