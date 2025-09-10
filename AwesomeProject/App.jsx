@@ -2,6 +2,7 @@
 import { View } from 'react-native';
 import React, { useState } from 'react';
 import OnPress from './src/OnPress';
+import UseStateHook from './src/UseStateHook';
 // import Jsx from './src/Jsx';
 // import First from "./src/First.jsx"
 
@@ -13,7 +14,7 @@ const App = () => {
   };
 
   return (
-    <View>
+    <View style={{flex: 1, backgroundColor: "white"}}>
       {/* <Text style={{ fontSize: 20, textAlign: 'center', marginBottom: 20, color: 'white' }}>{name}</Text> */}
       {/* <FunctionBasedComponent /> */}
       {/* <First />
@@ -21,7 +22,8 @@ const App = () => {
       <First /> */}
       {/* <Button title="Toggle Name" onPress={handlePress} /> */}
       {/* <Jsx />    */}
-      <OnPress />
+      {/* <OnPress /> */}
+      <UseStateHook />
     </View>
   );
 };
