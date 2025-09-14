@@ -9,6 +9,7 @@
      <View>
        <Text style = {{fontSize: 25}}>Props Tutorial</Text>
        <Button title="Counter" onPress = {() => setCount(count + 1)} />
+        <View style={{ marginTop: 10 }} />
        <Button title="Item" onPress = {() => setItem(item * 2)} />
        <Child data = {count} item = {item} />
      </View>
