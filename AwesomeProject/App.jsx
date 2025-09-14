@@ -1,8 +1,9 @@
 // import { View, Text, Button } from 'react-native';
 import { View } from 'react-native';
 import React, { useState } from 'react';
-import OnPress from './src/OnPress';
-import UseStateHook from './src/UseStateHook';
+import Props from './src/Props';
+// import OnPress from './src/OnPress';
+// import UseStateHook from './src/UseStateHook';
 // import Jsx from './src/Jsx';
 // import First from "./src/First.jsx"
 
@@ -23,7 +24,8 @@ const App = () => {
       {/* <Button title="Toggle Name" onPress={handlePress} /> */}
       {/* <Jsx />    */}
       {/* <OnPress /> */}
-      <UseStateHook />
+      {/* <UseStateHook /> */}
+      <Props />
     </View>
   );
 };
