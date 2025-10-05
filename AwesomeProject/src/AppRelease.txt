@@ -1,0 +1,64 @@
+================================================================================
+REACT NATIVE APK BUILD GUIDE - COPY & PASTE COMMANDS
+================================================================================
+
+📱 DEBUG APK (For Testing)
+================================================================================
+cd android
+./gradlew assembleDebug
+explorer app\build\outputs\apk\debug
+
+APK Location: android/app/build/outputs/apk/debug/app-debug.apk
+
+================================================================================
+🚀 RELEASE APK (For Production)
+================================================================================
+
+--- ONE-TIME SETUP (Do this only once) ---
+
+Step 1: Generate Keystore
+cd android/app
+keytool -genkeypair -v -storetype PKCS12 -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+(Enter password and fill details)
+
+Step 2: Edit android/gradle.properties (Add these lines at the end)
+MYAPP_RELEASE_STORE_FILE=my-release-key.keystore
+MYAPP_RELEASE_KEY_ALIAS=my-key-alias
+MYAPP_RELEASE_STORE_PASSWORD=your_password_here    (I gave qwerty)
+MYAPP_RELEASE_KEY_PASSWORD=your_password_here      (I gave qwerty)
+
+Step 3: Edit android/app/build.gradle (Add inside android { } block)
+signingConfigs {
+    release {
+        storeFile file(MYAPP_RELEASE_STORE_FILE)
+        storePassword MYAPP_RELEASE_STORE_PASSWORD
+        keyAlias MYAPP_RELEASE_KEY_ALIAS
+        keyPassword MYAPP_RELEASE_KEY_PASSWORD
+    }
+}
+buildTypes {
+    release {
+        signingConfig signingConfigs.release
+        minifyEnabled false
+        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+}
+
+--- BUILD RELEASE APK (Every time you need a release build) ---
+
+cd android
+./gradlew assembleRelease
+explorer app\build\outputs\apk\release
+
+APK Location: android/app/build/outputs/apk/release/app-release.apk
+
+================================================================================
+📝 NOTES
+================================================================================
+- Debug APK: Larger size, for testing only
+- Release APK: Smaller, optimized, production-ready
+- Always run commands from project root or android folder
+- Keep your keystore file safe - you need it for updates!
+- Transfer APK to phone and install (enable "Install from Unknown Sources")
+
+================================================================================
