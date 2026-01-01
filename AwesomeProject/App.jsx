@@ -1,20 +1,21 @@
 // import { View, Text, Button } from 'react-native';
 import { View } from 'react-native';
 import React, { useState } from 'react';
-import Calculator from './src/Calculator';
-import InputText from './src/InputText';
-import Props from './src/Props';
-import OnPress from './src/OnPress';
-import UseStateHook from './src/UseStateHook';
-import Jsx from './src/Jsx';
-import First from "./src/First.jsx"
+// import Calculator from './src/Calculator';
+// import InputText from './src/InputText';
+// import Props from './src/Props';
+// import OnPress from './src/OnPress';
+// import UseStateHook from './src/UseStateHook';
+// import Jsx from './src/Jsx';
+// import First from "./src/First.jsx"
+import Calc_Self from "./src/Calc_Self.jsx"
 
 const App = () => {
-  const [name, setName] = useState('Debashish'); // Initial name is 'Piyush'
+  // const [name, setName] = useState('Debashish'); // Initial name is 'Piyush'
 
-  const handlePress = () => {
-    setName(prevName => (prevName === 'Debashish' ? 'Rajeeb' : 'Debashish'));
-  };
+  // const handlePress = () => {
+  //   setName(prevName => (prevName === 'Debashish' ? 'Rajeeb' : 'Debashish'));
+  // };
 
   return (
     <View style={{flex: 1, backgroundColor: "white"}}>
@@ -29,7 +30,8 @@ const App = () => {
       {/* <UseStateHook /> */}
       {/* <Props /> */}
       {/* <InputText /> */}
-      <Calculator />
+      {/* <Calculator /> */}
+      <Calc_Self />
     </View>
   );
 };
