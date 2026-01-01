@@ -1,12 +1,13 @@
 // import { View, Text, Button } from 'react-native';
 import { View } from 'react-native';
 import React, { useState } from 'react';
+import Calculator from './src/Calculator';
 import InputText from './src/InputText';
-// import Props from './src/Props';
-// import OnPress from './src/OnPress';
-// import UseStateHook from './src/UseStateHook';
-// import Jsx from './src/Jsx';
-// import First from "./src/First.jsx"
+import Props from './src/Props';
+import OnPress from './src/OnPress';
+import UseStateHook from './src/UseStateHook';
+import Jsx from './src/Jsx';
+import First from "./src/First.jsx"
 
 const App = () => {
   const [name, setName] = useState('Debashish'); // Initial name is 'Piyush'
@@ -27,7 +28,8 @@ const App = () => {
       {/* <OnPress /> */}
       {/* <UseStateHook /> */}
       {/* <Props /> */}
-      <InputText />
+      {/* <InputText /> */}
+      <Calculator />
     </View>
   );
 };
